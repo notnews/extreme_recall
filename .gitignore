@@ -2,3 +2,10 @@
 .Rhistory
 .RData
 results/
+ms/*.aux
+ms/*.bbl
+ms/*.blg
+ms/*.fdb_latexmk
+ms/*.fls
+ms/*.log
+ms/*.out

@@ -6,7 +6,8 @@ tables <- list(
   coefficients = coefficients, contrasts = contrasts, interactions = interactions,
   cells = cells, equal_respondent = equal_respondent, sample_counts = sample_counts,
   recall_counts = recall_counts,
-  demographics = demographics
+  demographics = demographics, stage_means = stage_means,
+  stage_gaps = stage_gaps, stage_comparisons = stage_comparisons
 )
 purrr::iwalk(tables, ~ readr::write_csv(.x, file.path("results", paste0(.y, ".csv"))))
 knitr::kable(coefficients, format = "pipe", digits = 4) |>

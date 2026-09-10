@@ -43,7 +43,6 @@
 
 % Caption
 \usepackage[hang, font=small,skip=0pt, labelfont={bf}]{caption}
-\captionsetup[subtable]{font=small,skip=0pt}
 \usepackage{subcaption}
 
 % tt font issues
@@ -61,10 +60,12 @@
 \makeatother
 
 \title{Extreme Recall: Which Politicians Come to Mind?\\\vspace{10mm}}
+\date{September 10, 2026}
 
 \author{Gaurav Sood\thanks{Gaurav can be reached at: \href{mailto:gsood07@gmail.com}{\texttt{gsood07@gmail.com}}.}}
 
 \begin{document}
+\input{../tabs/numbers.tex}
 \maketitle
 
 \begin{comment}
@@ -76,13 +77,15 @@ setwd(basedir)
 \end{comment}
 \doublespacing
 
-In November 2013, we recruited 344 survey participants through Amazon's Mechanical Turk \citep[see][]{berinsky2012}. (See \ref{si_survey_dem} for a description of how we processed this data, and comparison to population benchmarks.) We asked the respondents, ``When you think about the Democratic (Republican) party, which political leader(s) first come to mind? Name up to three.'' We followed the open-ended question with a multiple-choice question that presented respondents a list of names and photos of political leaders and asked the respondents ``Is there another political leader that you haven't mentioned already who immediately comes to mind when you think about the Democratic (Republican) party?'' Among the Democrats, people choose between, Joseph Biden, Barney Frank, Bill Clinton, Hillary Clinton, Harry Reid, Ted Kennedy, Franklin Roosevelt, John Kerry, John Kennedy, Nancy Pelosi, Al Gore, Barack Obama. And among Republicans, between, Paul Ryan, John McCain, Paul Rand, Sarah Palin, Ronald Reagan, George W. Bush, John Boehner, Jeb Bush, Michele Bachmann, Ted Cruz, Chris Christie, Marco Rubio, Eric Cantor, Mitt Romney, and Mitch McConnell. We paired the responses with CF-Scores \citep{bonica2013}.
+In November 2013, we surveyed participants through Amazon's Mechanical Turk \citep[see][]{berinsky2012}; \scoreRespondents{} respondents contribute identified, score-matched free recalls to the analysis. (See \ref{si_survey_dem} for a description of how we processed this data, and comparison to population benchmarks.) We asked the respondents, ``When you think about the Democratic (Republican) party, which political leader(s) first come to mind? Name up to three.'' We followed the open-ended question with a multiple-choice question that presented respondents a list of names and photos of political leaders and asked the respondents ``Is there another political leader that you haven't mentioned already who immediately comes to mind when you think about the Democratic (Republican) party?'' Among the Democrats, people choose between, Joseph Biden, Barney Frank, Bill Clinton, Hillary Clinton, Harry Reid, Ted Kennedy, Franklin Roosevelt, John Kerry, John Kennedy, Nancy Pelosi, Al Gore, Barack Obama. And among Republicans, between, Paul Ryan, John McCain, Rand Paul, Sarah Palin, Ronald Reagan, George W. Bush, John Boehner, Jeb Bush, Michele Bachmann, Ted Cruz, Chris Christie, Marco Rubio, Eric Cantor, Mitt Romney, and Mitch McConnell. We paired the responses with CF-Scores \citep{bonica2013}.
+
+Respondents rated the first two freely recalled names and the prompted selection from each party on a seven-point liberal--conservative scale. There was no rating of the third free recall. Our primary rating analysis uses free recalls; the appendix also reports prompted selections and the pooled sample.
 
 We find that people are likelier to recall prominent politicians (see Figure \ref{fig:fig1}). On average, the people recall politicians who are no more extreme than the median member of Congress. For instance, recalled politicians are more extreme than the Senate mean just 55.6\% of the times. And the average difference to the Senate means is a mere .017 (see \ref{tab:tab1}). (For comparison, the standard deviation of CF-scores within the parties in the Senate is about .3.) People do recall more extreme politicians earlier but again the bias is substantively not particularly large. However, people tend to \textit{think} that these relatively moderate politicians are ideologically extreme (see \ref{si_recall}). Thus, the bias may be less in who is covered in the media, and more about how they are covered.
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
-  \caption{Distribution of Recall of Politicians}
+  \caption{Distribution of Recall of Politicians. The horizontal axis counts identified, score-matched free recalls across all three positions.}
   \includegraphics[width=\textwidth]{../figs/survey/names_tally.pdf}
   \label{fig:fig1}
 \end{figure}
@@ -108,7 +111,9 @@ We find that people are likelier to recall prominent politicians (see Figure \re
 
 \section{Survey data}
 
-Because the answers to the politician recall survey questions were open-ended (respondents typed in names), the responses were quite ``noisy'' (in addition to misspellings, some respondents just used last names, some just first names, etc) so we had to take several steps to address this.  First, we restricted attention to politicians whose exact name was used at least 3 times for at least one of the recall questions (these are the politicians listed in \ref{fig:fig1}). Then, to determine whether other respondents were attempting to refer to these politicians, we checked whether the respondent referred to the same last name (for unique last names), common misspellings of the last or first names (oboma, reed, hilary), and common stems for very difficult to spell names (boe or boh for boehner, mccon for mcconnell).  There were two non-unique last names, Bush and Clinton.  For the two Bushes: we coded any responses with 2nd, 3rd 4th or 5th word starting with s (for senior), or 2nd-3rd-4th starting with H (for middle initials H.W.) as 'george bush' and code all other responses as 'george w bush'. We coded responses of just 'clinton' as 'bill clinton'.  Regarding positions, we coded each politician as 'executive', 'legislative' or 'governor'.  We included all party nominees (president or vice president) as executive.  Failed candidates for party nomination are included in other categories.
+Because the answers to the politician recall survey questions were open-ended (respondents typed in names), the responses were quite ``noisy'' (in addition to misspellings, some respondents just used last names, some just first names, etc) so we had to take several steps to address this. The historical coding began with politicians whose exact name was used at least 3 times for at least one of the recall questions. Then, to determine whether other respondents were attempting to refer to these politicians, we checked whether the respondent referred to the same last name (for unique last names), common misspellings of the last or first names (oboma, reed, hilary), and common stems for very difficult to spell names (boe or boh for boehner, mccon for mcconnell). The revised analysis applies the union of these historical name assignments consistently across free-recall positions. We retain the historical defaults for ambiguous Bush and Clinton responses: senior or H.W. cues identify George H.W. Bush, other ambiguous Bush responses identify George W. Bush, and 'clinton' identifies Bill Clinton. Explicit 'Jeb Bush' responses identify Jeb Bush. Prompted selections use the identities on the menu. These defaults are coding conventions for ambiguous free responses.
+
+The analysis uses the archived static CF-score for each identified politician. Prompted selections with an available score are retained, including Jeb Bush, Ted Kennedy, and Barney Frank; John F. Kennedy and Franklin D. Roosevelt have no verified score in the archived file. Free-recall name assignments otherwise retain the historical roster. The unit of analysis is a politician--respondent mention. Means weight mentions equally, and uncertainty is clustered by respondent. We use ordinary least squares with a small-sample cluster correction and $t(G-1)$ inference, where $G$ is the number of respondents in the model. Independents contribute to descriptive means but are excluded from in-party/out-party comparisons. Recall position and elicitation stage enter as categories; reported contrasts are unadjusted for multiple comparisons.
 
 Table ~\ref{si_survey_dem} provides a synopsis.
 
@@ -123,41 +128,73 @@ Table ~\ref{si_survey_dem} provides a synopsis.
 \hline
 & & &\\
 \textbf{Age} & & &\\
-18-29 & 23.2\% & & 19.2\%\\
-30-49 & 41.9\% & & 31.7\%\\
-50+ & 35.0\% & & 49.2\%\\
+% External ANES/Census benchmark values are retained from the historical draft.
+18-29 & \sampleAgeYoung\% & & 19.2\%\\
+30-49 & \sampleAgeMiddle\% & & 31.7\%\\
+50+ & \sampleAgeOlder\% & & 49.2\%\\
 & & &\\
 \textbf{Gender} & & &\\
-Male & 53.0\% & & 49.1\%\\
-Female & 47.0\% & & 50.9\%\\
+Male & \sampleMale\% & & 49.1\%\\
+Female & \sampleFemale\% & & 50.9\%\\
 & & &\\
 \textbf{Race/Ethnicity} & & &\\
-White/Caucasian & 87.9\% & & 63.7\% \\
-Black/African-American & 4.7\% & & 12.2\%\\
-Asian/PI & 4.1\% & & 4.8\%\\
-Hispanic/Latino & n/a \% & & 16.4\%\\
-Native American & 1.0\% & & 1.1\%\\
-Other/more than one & 2.2\% & & 6.2\%\\
+White/Caucasian & \sampleWhite\% & & 63.7\% \\
+Black/African-American & \sampleBlack\% & & 12.2\%\\
+Asian/PI & \sampleAsianPacific\% & & 4.8\%\\
+Hispanic/Latino & \sampleHispanic\% & & 16.4\%\\
+Native American & \sampleNative\% & & 1.1\%\\
+Other/more than one & \sampleOtherRace\% & & 6.2\%\\
 & & &\\
 \textbf{Education} & & &\\
-Less than HS degree & 0.0\% & & 8.9\%\\
-High school/GED & 11.1\% & & 31.0\%\\
-Some college/2-year degree & 36.5\% & &28.0\%\\
-4-year college degree & 41.7\% & & 18.0\%\\
-Graduate/professional degree & 10.7\% & & 9.3\%\\
+Less than HS degree & \sampleLessHighSchool\% & & 8.9\%\\
+High school/GED & \sampleHighSchool\% & & 31.0\%\\
+Some college/2-year degree & \sampleCollege\% & &28.0\%\\
+4-year college degree & \sampleBachelor\% & & 18.0\%\\
+Graduate/professional degree & \sampleAdvanced\% & & 9.3\%\\
 & & &\\
 \textbf{Party Identification} & & &\\
-Democratic (inc. leaners) & 56.9\% & 49.0\% &\\
-Republican (inc. leaners) & 31.0\% & 39.0\% &\\
-No party preference/Other & 12.2\% & 11.9\% &\\
+Democratic (inc. leaners) & \sampleDemocrat\% & 49.0\% &\\
+Republican (inc. leaners) & \sampleRepublican\% & 39.0\% &\\
+No party preference/Other & \sampleIndependent\% & 11.9\% &\\
 \hline
 \end{tabular}
-\caption*{Note: Sample statistics are for sample used for analysis, with N=1,725 and unit of observation of (identified) recalled politician-respondent (respondents who recalled more identified politician are used more often).  White/Caucasion category is non-Hispanic for 2010 Census (no separate Hispanic category in race variable for survey).}
+\caption*{Note: Sample statistics are for the free-recall analysis, with N=\scoreMentions{} mentions from \scoreRespondents{} respondents. Respondents who recalled more identified politicians receive more weight. White/Caucasian includes Hispanic respondents in the survey but is non-Hispanic for the Census benchmark. Hispanic origin is recorded separately from race in the survey.}
 \end{table}
 \clearpage
 
 \subsection{Recall Results}
 \label{si_recall}
+CF-scores are oriented toward the recalled politician's party: Democratic scores are multiplied by $-1$, and Republican scores retain their sign. First recalls have higher party-directed CF-scores than later recalls (Table~\ref{tab:recall_order}). These comparisons condition on the supplied score estimates.
+
+\begin{table}[ht]
+\centering
+\small
+\caption{CF-score Differences by Free-recall Position}
+\label{tab:recall_order}
+\input{../tabs/recall_order.tex}
+\caption*{Note: Differences are relative to the first free recall, with respondent-clustered 95\% confidence intervals. The model includes \partisanMentions{} mentions from \partisanRespondents{} Democratic or Republican respondents.}
+\end{table}
+
+Ratings are oriented toward the recalled politician's party and rescaled from the seven-point slider: 0 is the opposite party's ideological endpoint, 0.5 is moderate, and 1 is the expected party's endpoint. Table~\ref{tab:ratings} reports means for the primary free-recall sample and the prompted-selection comparison. These ratings describe perceived ideological position; the rating scale and CF-score scale do not supply a calibrated measure of perceptual error.
+
+\begin{table}[ht]
+\centering
+\small
+\caption{Perceived Ideological Position by Elicitation Task}
+\label{tab:ratings}
 \input{../tabs/recall.tex}
+\caption*{Note: Mention-weighted means with respondent-clustered 95\% confidence intervals. Free recall includes the first two names from each party. Prompted selections are matched to the actual selected name and its score. Independents are included.}
+\end{table}
+
+Table~\ref{tab:party_gaps} compares out-party and in-party ratings at each stage. The gap changes by \freeGapChange{} between the first and second free recall (95\% CI [\freeGapLower, \freeGapUpper]; $p=\freeGapP$). Between the first free recall and the prompted selection, the gap changes by \promptedGapChange{} (95\% CI [\promptedGapLower, \promptedGapUpper]; $p=\promptedGapP$). The latter compares elicitation tasks involving different selected politicians; it is not a third free-recall position or an estimate of the causal effect of prompting.
+
+\begin{table}[ht]
+\centering
+\small
+\caption{Out-party Minus In-party Rating Gaps}
+\label{tab:party_gaps}
+\input{../tabs/party_gaps.tex}
+\caption*{Note: Gaps and respondent-clustered 95\% confidence intervals come from the party-by-stage model with \stageMentions{} ratings from \stageRespondents{} Democratic or Republican respondents.}
+\end{table}
 
 \end{document}

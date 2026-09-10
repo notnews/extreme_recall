@@ -6,7 +6,7 @@ prepare_survey <- function(survey, name_crosswalk, politician_scores, rating_fie
   stopifnot(!anyDuplicated(survey$uniqid))
   name_crosswalk <- name_crosswalk |>
     mutate(across(c(response, name), normalize_name))
-  stopifnot(!anyDuplicated(select(name_crosswalk, recall_party, response)))
+  stopifnot(!anyDuplicated(select(name_crosswalk, response_type, recall_party, response)))
   politician_scores <- politician_scores |>
     transmute(name = normalize_name(name), cfscore) |>
     distinct()
@@ -49,7 +49,7 @@ prepare_survey <- function(survey, name_crosswalk, politician_scores, rating_fie
     ) |>
     left_join(
       name_crosswalk,
-      by = join_by(recall_party, response_key == response),
+      by = join_by(response_type, recall_party, response_key == response),
       relationship = "many-to-one"
     ) |>
     left_join(politician_scores, by = "name", relationship = "many-to-one") |>

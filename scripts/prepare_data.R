@@ -19,3 +19,13 @@ scored_partisans <- scored_mentions |>
 rated_partisans <- rated_mentions |>
   filter(party_relation != "independent") |>
   mutate(party_relation = droplevels(party_relation))
+prompted_mentions <- responses |>
+  filter(response_type == "multiple_choice", score_status == "scored", !is.na(perceived_direction))
+pooled_mentions <- bind_rows(rated_mentions, prompted_mentions) |>
+  mutate(stage = factor(
+    if_else(response_type == "multiple_choice", "prompted", as.character(recall_order)),
+    levels = c("1", "2", "prompted")
+  ))
+pooled_partisans <- pooled_mentions |>
+  filter(party_relation != "independent") |>
+  mutate(party_relation = droplevels(party_relation))

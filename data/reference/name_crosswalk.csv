@@ -1,159 +1,185 @@
-"recall_party","response","name"
-"dem","al gore","al gore"
-"dem","b obama","barack obama"
-"dem","b. obama","barack obama"
-"dem","barach obama","barack obama"
-"dem","barack obama","barack obama"
-"dem","barak obama","barack obama"
-"dem","barrack obama","barack obama"
-"dem","barrack oboma","barack obama"
-"dem","barrak obama","barack obama"
-"dem","barrak oboma","barack obama"
-"dem","biden","joe biden"
-"dem","bill clinton","bill clinton"
-"dem","brack obama","barack obama"
-"dem","brarack obama","barack obama"
-"dem","carter","jimmy carter"
-"dem","clinton","bill clinton"
-"dem","elizabeth warren","elizabeth warren"
-"dem","gore","al gore"
-"dem","harry reed","harry reid"
-"dem","harry reid","harry reid"
-"dem","hilary clinton","hillary clinton"
-"dem","hiliary clinton","hillary clinton"
-"dem","hillary clinton","hillary clinton"
-"dem","hillary cliton","hillary clinton"
-"dem","hillary cllinton","hillary clinton"
-"dem","hilliary clinton","hillary clinton"
-"dem","jfk","jfk"
-"dem","jimmie carter","jimmy carter"
-"dem","jimmy carter","jimmy carter"
-"dem","joe biden","joe biden"
-"dem","john f. kennedy","jfk"
-"dem","john kennedy","jfk"
-"dem","john kerry","john kerry"
-"dem","joseph biden","joe biden"
-"dem","kerry","john kerry"
-"dem","max baucus","max baucus"
-"dem","michelle obama","barack obama"
-"dem","nacy pelosi","nancy pelosi"
-"dem","nanci pelosi","nancy pelosi"
-"dem","nancy pelosi","nancy pelosi"
-"dem","obama","barack obama"
-"dem","oboma","barack obama"
-"dem","pelosi","nancy pelosi"
-"dem","pelosi (sp)","nancy pelosi"
-"dem","pres. carter","jimmy carter"
-"dem","pres. obama","barack obama"
-"dem","president barack obama","barack obama"
-"dem","president barak obama","barack obama"
-"dem","president barak oboma","barack obama"
-"dem","president jimmy carter","jimmy carter"
-"dem","president obama","barack obama"
-"dem","reed","harry reid"
-"dem","reid","harry reid"
-"dem","rep. pelosi","nancy pelosi"
-"dem","sen. reid","harry reid"
-"dem","vice president biden","joe biden"
-"dem","warren","elizabeth warren"
-"rep","abe lincoln","lincoln"
-"rep","abraham lincoln","lincoln"
-"rep","bachman","michele bachmann"
-"rep","boehner","john boehner"
-"rep","boener","john boehner"
-"rep","boenher","john boehner"
-"rep","boenor","john boehner"
-"rep","boherer","john boehner"
-"rep","bohner","john boehner"
-"rep","bush","george w bush"
-"rep","bush 2","george w bush"
-"rep","bush jr","george w bush"
-"rep","bush jr.","george w bush"
-"rep","bush junior","george w bush"
-"rep","bush senior","george bush"
-"rep","bush sr","george bush"
-"rep","cantor","eric cantor"
-"rep","cheney","dick cheney"
-"rep","chis christie","chris christie"
-"rep","chris christi","chris christie"
-"rep","chris christie","chris christie"
-"rep","chris christy","chris christie"
-"rep","christi","chris christie"
-"rep","christie","chris christie"
-"rep","cruz","ted cruz"
-"rep","dick cheney","dick cheney"
-"rep","eric cantor","eric cantor"
-"rep","g hw bush","george bush"
-"rep","george bush","george w bush"
-"rep","george bush ii","george w bush"
-"rep","george bush jr","george w bush"
-"rep","george bush jr.","george w bush"
-"rep","george bush sr.","george bush"
-"rep","george h. bush","george bush"
-"rep","george h.w. bush","george bush"
-"rep","george hw bush","george bush"
-"rep","george w bush","george w bush"
-"rep","george w. bush","george w bush"
-"rep","gov christie","chris christie"
-"rep","jeb bush","george w bush"
-"rep","jim boehner","john boehner"
-"rep","joe boenher","john boehner"
-"rep","john baner","john boehner"
-"rep","john banher","john boehner"
-"rep","john banner","john boehner"
-"rep","john boedner","john boehner"
-"rep","john boehneir","john boehner"
-"rep","john boehner","john boehner"
-"rep","john boener","john boehner"
-"rep","john boenher","john boehner"
-"rep","john bohenor","john boehner"
-"rep","john bohner","john boehner"
-"rep","john mccain","john mccain"
-"rep","johne boehner","john boehner"
-"rep","jon huntsman","jon huntsman"
-"rep","kevin mccarthy","kevin mccarthy"
-"rep","lincoln","lincoln"
-"rep","marco rubio","marco rubio"
-"rep","mark rubio","marco rubio"
-"rep","mccain","john mccain"
-"rep","mcconnel","mitch mcconnell"
-"rep","mcconnell","mitch mcconnell"
-"rep","mich mcconnel","mitch mcconnell"
-"rep","michele bachman","michele bachmann"
-"rep","michele bachmann","michele bachmann"
-"rep","michelle bachman","michele bachmann"
-"rep","michelle bachmann","michele bachmann"
-"rep","mit romni","mitt romney"
-"rep","mitch mcconell","mitch mcconnell"
-"rep","mitch mcconnel","mitch mcconnell"
-"rep","mitch mcconnell","mitch mcconnell"
-"rep","mitt romney","mitt romney"
-"rep","newt gingrech","newt gingrich"
-"rep","newt gingrich","newt gingrich"
-"rep","nixon","nixon"
-"rep","palin","sarah palin"
-"rep","paul ryan","paul ryan"
-"rep","president bush","george w bush"
-"rep","president george bush (2nd one)","george w bush"
-"rep","president george bush (jr)","george w bush"
-"rep","president reagen","ronald reagan"
-"rep","president ronald reagen","ronald reagan"
-"rep","rand paul","rand paul"
-"rep","reagan","ronald reagan"
-"rep","reagon","ronald reagan"
-"rep","regan","ronald reagan"
-"rep","regon","ronald reagan"
-"rep","representative boenhner","john boehner"
-"rep","richard nixon","nixon"
-"rep","rick perry","rick perry"
-"rep","romney","mitt romney"
-"rep","ronald reagan","ronald reagan"
-"rep","ronald reagen","ronald reagan"
-"rep","ronald regan","ronald reagan"
-"rep","rubio","marco rubio"
-"rep","sara palin","sarah palin"
-"rep","sarah palin","sarah palin"
-"rep","sen. mccain","john mccain"
-"rep","ted cruz","ted cruz"
-"rep","tricky dick nixon","nixon"
-"rep","w. bush","george w bush"
+response_type,recall_party,response,name
+free_recall,dem,al gore,al gore
+free_recall,dem,b obama,barack obama
+free_recall,dem,b. obama,barack obama
+free_recall,dem,barach obama,barack obama
+free_recall,dem,barack obama,barack obama
+free_recall,dem,barak obama,barack obama
+free_recall,dem,barrack obama,barack obama
+free_recall,dem,barrack oboma,barack obama
+free_recall,dem,barrak obama,barack obama
+free_recall,dem,barrak oboma,barack obama
+free_recall,dem,biden,joe biden
+free_recall,dem,bill clinton,bill clinton
+free_recall,dem,brack obama,barack obama
+free_recall,dem,brarack obama,barack obama
+free_recall,dem,carter,jimmy carter
+free_recall,dem,clinton,bill clinton
+free_recall,dem,elizabeth warren,elizabeth warren
+free_recall,dem,gore,al gore
+free_recall,dem,harry reed,harry reid
+free_recall,dem,harry reid,harry reid
+free_recall,dem,hilary clinton,hillary clinton
+free_recall,dem,hiliary clinton,hillary clinton
+free_recall,dem,hillary clinton,hillary clinton
+free_recall,dem,hillary cliton,hillary clinton
+free_recall,dem,hillary cllinton,hillary clinton
+free_recall,dem,hilliary clinton,hillary clinton
+free_recall,dem,jfk,jfk
+free_recall,dem,jimmie carter,jimmy carter
+free_recall,dem,jimmy carter,jimmy carter
+free_recall,dem,joe biden,joe biden
+free_recall,dem,john f. kennedy,jfk
+free_recall,dem,john kennedy,jfk
+free_recall,dem,john kerry,john kerry
+free_recall,dem,joseph biden,joe biden
+free_recall,dem,kerry,john kerry
+free_recall,dem,max baucus,max baucus
+free_recall,dem,michelle obama,barack obama
+free_recall,dem,nacy pelosi,nancy pelosi
+free_recall,dem,nanci pelosi,nancy pelosi
+free_recall,dem,nancy pelosi,nancy pelosi
+free_recall,dem,obama,barack obama
+free_recall,dem,oboma,barack obama
+free_recall,dem,pelosi,nancy pelosi
+free_recall,dem,pelosi (sp),nancy pelosi
+free_recall,dem,pres. carter,jimmy carter
+free_recall,dem,pres. obama,barack obama
+free_recall,dem,president barack obama,barack obama
+free_recall,dem,president barak obama,barack obama
+free_recall,dem,president barak oboma,barack obama
+free_recall,dem,president jimmy carter,jimmy carter
+free_recall,dem,president obama,barack obama
+free_recall,dem,reed,harry reid
+free_recall,dem,reid,harry reid
+free_recall,dem,rep. pelosi,nancy pelosi
+free_recall,dem,sen. reid,harry reid
+free_recall,dem,vice president biden,joe biden
+free_recall,dem,warren,elizabeth warren
+free_recall,rep,abe lincoln,lincoln
+free_recall,rep,abraham lincoln,lincoln
+free_recall,rep,bachman,michele bachmann
+free_recall,rep,boehner,john boehner
+free_recall,rep,boener,john boehner
+free_recall,rep,boenher,john boehner
+free_recall,rep,boenor,john boehner
+free_recall,rep,boherer,john boehner
+free_recall,rep,bohner,john boehner
+free_recall,rep,bush,george w bush
+free_recall,rep,bush 2,george w bush
+free_recall,rep,bush jr,george w bush
+free_recall,rep,bush jr.,george w bush
+free_recall,rep,bush junior,george w bush
+free_recall,rep,bush senior,george bush
+free_recall,rep,bush sr,george bush
+free_recall,rep,cantor,eric cantor
+free_recall,rep,cheney,dick cheney
+free_recall,rep,chis christie,chris christie
+free_recall,rep,chris christi,chris christie
+free_recall,rep,chris christie,chris christie
+free_recall,rep,chris christy,chris christie
+free_recall,rep,christi,chris christie
+free_recall,rep,christie,chris christie
+free_recall,rep,cruz,ted cruz
+free_recall,rep,dick cheney,dick cheney
+free_recall,rep,eric cantor,eric cantor
+free_recall,rep,g hw bush,george bush
+free_recall,rep,george bush,george w bush
+free_recall,rep,george bush ii,george w bush
+free_recall,rep,george bush jr,george w bush
+free_recall,rep,george bush jr.,george w bush
+free_recall,rep,george bush sr.,george bush
+free_recall,rep,george h. bush,george bush
+free_recall,rep,george h.w. bush,george bush
+free_recall,rep,george hw bush,george bush
+free_recall,rep,george w bush,george w bush
+free_recall,rep,george w. bush,george w bush
+free_recall,rep,gov christie,chris christie
+free_recall,rep,jeb bush,jeb bush
+free_recall,rep,jim boehner,john boehner
+free_recall,rep,joe boenher,john boehner
+free_recall,rep,john baner,john boehner
+free_recall,rep,john banher,john boehner
+free_recall,rep,john banner,john boehner
+free_recall,rep,john boedner,john boehner
+free_recall,rep,john boehneir,john boehner
+free_recall,rep,john boehner,john boehner
+free_recall,rep,john boener,john boehner
+free_recall,rep,john boenher,john boehner
+free_recall,rep,john bohenor,john boehner
+free_recall,rep,john bohner,john boehner
+free_recall,rep,john mccain,john mccain
+free_recall,rep,johne boehner,john boehner
+free_recall,rep,jon huntsman,jon huntsman
+free_recall,rep,kevin mccarthy,kevin mccarthy
+free_recall,rep,lincoln,lincoln
+free_recall,rep,marco rubio,marco rubio
+free_recall,rep,mark rubio,marco rubio
+free_recall,rep,mccain,john mccain
+free_recall,rep,mcconnel,mitch mcconnell
+free_recall,rep,mcconnell,mitch mcconnell
+free_recall,rep,mich mcconnel,mitch mcconnell
+free_recall,rep,michele bachman,michele bachmann
+free_recall,rep,michele bachmann,michele bachmann
+free_recall,rep,michelle bachman,michele bachmann
+free_recall,rep,michelle bachmann,michele bachmann
+free_recall,rep,mit romni,mitt romney
+free_recall,rep,mitch mcconell,mitch mcconnell
+free_recall,rep,mitch mcconnel,mitch mcconnell
+free_recall,rep,mitch mcconnell,mitch mcconnell
+free_recall,rep,mitt romney,mitt romney
+free_recall,rep,newt gingrech,newt gingrich
+free_recall,rep,newt gingrich,newt gingrich
+free_recall,rep,nixon,nixon
+free_recall,rep,palin,sarah palin
+free_recall,rep,paul ryan,paul ryan
+free_recall,rep,president bush,george w bush
+free_recall,rep,president george bush (2nd one),george w bush
+free_recall,rep,president george bush (jr),george w bush
+free_recall,rep,president reagen,ronald reagan
+free_recall,rep,president ronald reagen,ronald reagan
+free_recall,rep,rand paul,rand paul
+free_recall,rep,reagan,ronald reagan
+free_recall,rep,reagon,ronald reagan
+free_recall,rep,regan,ronald reagan
+free_recall,rep,regon,ronald reagan
+free_recall,rep,representative boenhner,john boehner
+free_recall,rep,richard nixon,nixon
+free_recall,rep,rick perry,rick perry
+free_recall,rep,romney,mitt romney
+free_recall,rep,ronald reagan,ronald reagan
+free_recall,rep,ronald reagen,ronald reagan
+free_recall,rep,ronald regan,ronald reagan
+free_recall,rep,rubio,marco rubio
+free_recall,rep,sara palin,sarah palin
+free_recall,rep,sarah palin,sarah palin
+free_recall,rep,sen. mccain,john mccain
+free_recall,rep,ted cruz,ted cruz
+free_recall,rep,tricky dick nixon,nixon
+free_recall,rep,w. bush,george w bush
+multiple_choice,dem,barack obama,barack obama
+multiple_choice,dem,barney frank,barney frank
+multiple_choice,dem,bill clinton,bill clinton
+multiple_choice,dem,franklin d. roosevelt,franklin d roosevelt
+multiple_choice,dem,harry reid,harry reid
+multiple_choice,dem,hillary clinton,hillary clinton
+multiple_choice,dem,joe biden,joe biden
+multiple_choice,dem,john f. kennedy,jfk
+multiple_choice,dem,john kerry,john kerry
+multiple_choice,dem,nancy pelosi,nancy pelosi
+multiple_choice,dem,ted kennedy,ted kennedy
+multiple_choice,rep,chris christie,chris christie
+multiple_choice,rep,eric cantor,eric cantor
+multiple_choice,rep,george w. bush,george w bush
+multiple_choice,rep,jeb bush,jeb bush
+multiple_choice,rep,john boehner,john boehner
+multiple_choice,rep,john mccain,john mccain
+multiple_choice,rep,marco rubio,marco rubio
+multiple_choice,rep,michele bachmann,michele bachmann
+multiple_choice,rep,mitch mcconnell,mitch mcconnell
+multiple_choice,rep,mitt romney,mitt romney
+multiple_choice,rep,paul ryan,paul ryan
+multiple_choice,rep,rand paul,rand paul
+multiple_choice,rep,ronald reagan,ronald reagan
+multiple_choice,rep,sarah palin,sarah palin
+multiple_choice,rep,ted cruz,ted cruz

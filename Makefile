@@ -1,10 +1,16 @@
-.PHONY: restore analysis test lint check
+.PHONY: restore analysis exhibits paper test lint check
 
 restore:
 	Rscript -e 'renv::restore(prompt = FALSE)'
 
 analysis:
 	Rscript scripts/run_all.R
+
+exhibits:
+	Rscript -e 'source("scripts/run_all.R"); source("scripts/exhibits.R")'
+
+paper: exhibits
+	cd ms && latexmk -pdf -interaction=nonstopmode -halt-on-error extreme_recall.tex
 
 test:
 	Rscript -e 'testthat::test_dir("tests/testthat", stop_on_failure = TRUE)'

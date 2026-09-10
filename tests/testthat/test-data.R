@@ -93,6 +93,26 @@ test_that("the reference dictionary is the union of historical assignments", {
     distinct() |>
     anti_join(historical_aliases, by = join_by(recall_party, response))
   expected <- bind_rows(historical_aliases, canonical_names) |>
+    mutate(name = if_else(response == "jeb bush", "jeb bush", name)) |>
     arrange(recall_party, response)
-  expect_equal(as.data.frame(name_crosswalk), as.data.frame(expected))
+  free_names <- name_crosswalk |>
+    filter(response_type == "free_recall") |>
+    select(-response_type)
+  expect_equal(as.data.frame(free_names), as.data.frame(expected))
+})
+
+test_that("prompted selections retain their explicit identities", {
+  prompted <- responses |> filter(response_type == "multiple_choice", response_key != "")
+  expect_true(all(prompted$coding_status == "identified"))
+  jeb <- prompted |> filter(response_key == "jeb bush")
+  expect_equal(nrow(jeb), 6L)
+  expect_true(all(jeb$name == "jeb bush"))
+  source_scores <- readstata13::read.dta13("data/turk/names_scores.dta")
+  expect_equal(jeb$cfscore, rep(source_scores$cfscore[source_scores$name == "jeb bush"], 6))
+  free_jeb <- responses |> filter(response_type == "free_recall", response_key == "jeb bush")
+  expect_equal(nrow(free_jeb), 3L)
+  expect_true(all(free_jeb$name == "jeb bush"))
+  expect_equal(nrow(prompted_mentions), 633L)
+  expect_equal(nrow(pooled_mentions), 1835L)
+  expect_false(anyDuplicated(select(pooled_mentions, respondent_id, name_column)) > 0)
 })

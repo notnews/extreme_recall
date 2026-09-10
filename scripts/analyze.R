@@ -18,6 +18,18 @@ models <- list(
   perception_party_order = lm_robust(
     perceived_direction ~ party_relation * recall_order,
     data = rated_partisans, clusters = respondent_id, se_type = "stata"
+  ),
+  prompted_mean = lm_robust(
+    perceived_direction ~ 1,
+    data = prompted_mentions, clusters = respondent_id, se_type = "stata"
+  ),
+  pooled_mean = lm_robust(
+    perceived_direction ~ 1,
+    data = pooled_mentions, clusters = respondent_id, se_type = "stata"
+  ),
+  perception_party_stage = lm_robust(
+    perceived_direction ~ party_relation * stage,
+    data = pooled_partisans, clusters = respondent_id, se_type = "stata"
   )
 )
 coefficients <- map(
@@ -37,6 +49,17 @@ interactions <- position_contrasts |>
   map(contrast, method = "revpairwise", by = "contrast", adjust = "none") |>
   map(broom::tidy, conf.int = TRUE) |>
   list_rbind(names_to = "model")
+stage_means <- emmeans(
+  models$perception_party_stage, ~ party_relation | stage,
+  df = unique(models$perception_party_stage$df)
+)
+stage_gaps <- contrast(stage_means, method = "revpairwise", adjust = "none")
+stage_comparisons <- contrast(
+  stage_gaps, method = "trt.vs.ctrl", by = "contrast", ref = 1, adjust = "none"
+) |>
+  broom::tidy(conf.int = TRUE)
+stage_gaps <- broom::tidy(stage_gaps, conf.int = TRUE)
+stage_means <- broom::tidy(stage_means, conf.int = TRUE)
 
 outcomes <- scored_mentions |>
   select(respondent_id, party_relation, recall_order, score_direction, perceived_direction) |>

@@ -31,3 +31,22 @@ test_that("standard estimators reproduce independent clustered inference", {
   expect_equal(shuffled_model$coefficients, models$perception_party_order$coefficients)
   expect_equal(shuffled_model$vcov, models$perception_party_order$vcov)
 })
+
+test_that("prompted comparisons use respondent inference and preserve stage identities", {
+  source("scripts/analyze.R", local = TRUE)
+  reference <- lm(perceived_direction ~ party_relation * stage, data = pooled_partisans)
+  covariance <- sandwich::vcovCL(reference, cluster = pooled_partisans$respondent_id, type = "HC1")
+  reference_test <- lmtest::coeftest(
+    reference, vcov. = covariance, df = n_distinct(pooled_partisans$respondent_id) - 1
+  )
+  fitted <- coefficients |> filter(model == "perception_party_stage")
+  expect_equal(fitted$estimate, unname(coef(reference)), tolerance = 1e-10)
+  expect_equal(fitted$std.error, sqrt(unname(diag(covariance))), tolerance = 1e-10)
+  expect_equal(stage_comparisons$estimate, tail(fitted$estimate, 2), tolerance = 1e-10)
+  expect_equal(stage_comparisons$p.value, unname(tail(reference_test[, 4], 2)), tolerance = 1e-10)
+  expect_true(all(stage_comparisons$df == n_distinct(pooled_partisans$respondent_id) - 1))
+  expect_equal(models$pooled_mean$coefficients[[1]], mean(pooled_mentions$perceived_direction))
+  expect_equal(
+    models$perception_mean$coefficients[[1]], mean(rated_mentions$perceived_direction)
+  )
+})
