@@ -2,7 +2,7 @@
 
 An R analysis of which politicians MTurk respondents recall and how they rate them.
 
-The R workflow links ratings to their survey questions, applies name coding consistently, and joins one static CF-score per politician. Free recall is the primary analysis; prompted selections and the pooled sample provide the accompanying comparison. The release candidate updates the appendix and recall figure. The main-text Senate comparison remains historical pending the author's decision about its unverifiable benchmark.
+The R workflow links ratings to their survey questions, applies name coding consistently, and joins one static CF-score per politician. Free recall is the primary analysis; prompted selections and the pooled sample provide the accompanying comparison. The manuscript, appendix, and recall figure use these results. The historical Senate comparison and its dependent interpretation are omitted because the benchmark cannot be verified from the supplied sources.
 
 With R 4.6 installed, run:
 
@@ -43,4 +43,4 @@ The analysis starts from `data/turk/PartyExemplarsRecode.csv` and retains respon
 
 This is a research snapshot, with local checks rather than continuous GitHub automation. A release consists of the reviewed Git commit, the R lockfile, source data, generated exhibits, and compiled manuscript. Run `make restore`, `make check`, and `make paper` before tagging it. Subsequent substantive work should receive another dated revision.
 
-The current candidate replaces the historical mixed-task rating model with free-recall results and an explicit prompted-stage comparison. Relinking the same ratings alone would not change the intercept-only mean; restricting to free recall changes the sample and question. Switching from a random-intercept model to clustered OLS is also an estimator choice. The appendix documents those choices, rather than attributing all numerical changes to a linkage repair.
+This revision replaces the historical mixed-task rating model with free-recall results and an explicit prompted-stage comparison. Relinking the same ratings alone would not change the intercept-only mean; restricting to free recall changes the sample and question. Switching from a random-intercept model to clustered OLS is also an estimator choice. The appendix documents those choices, rather than attributing all numerical changes to a linkage repair. The original Senate table and interpretation remain available in Git history; this release makes no claim about extremity relative to Congress or calibrated perceptual error.
