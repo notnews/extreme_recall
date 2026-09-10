@@ -1,0 +1,23 @@
+Package: extremerecall
+Type: Project
+Title: Extreme Recall Analysis
+Imports:
+    broom,
+    digest,
+    dplyr,
+    emmeans,
+    estimatr,
+    ggplot2,
+    knitr,
+    lintr,
+    lmtest,
+    purrr,
+    readr,
+    readstata13,
+    renv,
+    sandwich,
+    stringr,
+    testthat,
+    tibble,
+    tidyr,
+    withr
